@@ -14,10 +14,10 @@ tbody
       - var out = 0
       - var vin = 0
       each r in tx.vout 
-        if r.addresses == address.a_id
+        if r.address == address.a_id
           - out = r.amount
       each s in tx.vin
-        if s.addresses == address.a_id
+        if s.address == address.a_id
           - vin = s.amount
       if out > 0 && vin > 0
         td.info

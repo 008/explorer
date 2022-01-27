@@ -26,8 +26,8 @@ block content
             $("#burnfee").text(formatNumber(Math.floor(json.burnFee - json.burnNode)));
             $("#burnnode").text(formatNumber(json.burnNode));
             $("#burntotal").text(formatNumber(Math.floor(json.burnFee)));
-            $("#explorerAddresses").text(json.explorerAddresses);
-            $("#explorerActiveAddresses").text(json.explorerActiveAddresses);
+            $("#explorerAddress").text(json.explorerAddress);
+            $("#explorerActiveAddress").text(json.explorerActiveAddress);
             $("#explorerTop10").text(formatNumber(Math.floor(json.explorerTop10)));
             $("#explorerTop50").text(formatNumber(Math.floor(json.explorerTop50)));
             var KnownHash = (json.known_hashrate / 1000000000).toFixed(2);
@@ -218,28 +218,28 @@ block content
        .col-md-3
           .panel.panel-default(style='background-color:transparent;')
             .panel-heading
-              strong #{settings.locale.addresses_stat}
+              strong #{settings.locale.address_stat}
             .panel-body
               table.table.table-bordered.summary-table(style='background-color: rgba(0, 2, 59, 1);border-radius:10px;color:white;border:none !important;')
                 tbody
                   tr
                     td
-                        span #{settings.locale.nb_addresses}
+                        span #{settings.locale.nb_address}
                     td
-                        span#explorerAddresses -
+                        span#explorerAddress -
                   tr
                     td
-                      span #{settings.locale.active_addresses}
+                      span #{settings.locale.active_address}
                     td
-                      span#explorerActiveAddresses -
+                      span#explorerActiveAddress -
                   tr
                     td
-                      span #{settings.locale.top10_addresses}
+                      span #{settings.locale.top10_address}
                     td
                       span#explorerTop10 -
                   tr
                     td
-                      span #{settings.locale.top50_addresses}
+                      span #{settings.locale.top50_address}
                     td
                       span#explorerTop50 -
        .col-md-3

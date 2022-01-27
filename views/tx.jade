@@ -62,20 +62,20 @@ block content
                 tr
                   th #{settings.locale.tx_address}
                   if (tx.vin.length > 0)
-                    if tx.vin[0].addresses != 'coinbase'
+                    if tx.vin[0].address != 'coinbase'
                       th.hidden-xs #{settings.locale.mkt_amount} (#{settings.symbol})
               tbody
                 if tx.vin.length > 0
                   each r in tx.vin
-                    if r.addresses == 'coinbase' 
+                    if r.address == 'coinbase' 
                       tr.info(style='text-align:center')
                         td #{settings.locale.new_coins}
                     else
                       - var ramount = r.amount / 100000000
                       tr
                         td 
-                          a.loading(href='/address/#{r.addresses}') 
-                            =r.addresses
+                          a.loading(href='/address/#{r.address}') 
+                            =r.address
                         td.danger.hidden-xs #{ramount.toFixed(8)}
                       tr.hidden-lg.hidden-md
                           td.danger #{ramount.toFixed(8)} #{settings.symbol}
@@ -97,16 +97,16 @@ block content
                     - var ramount = r.amount / 100000000  
                     tr
                       td 
-                        a.loading(href='/address/#{r.addresses}') 
-                          =r.addresses 
+                        a.loading(href='/address/#{r.address}') 
+                          =r.address 
                       td.success.hidden-xs  #{ramount.toFixed(8)}
                     tr.hidden-lg.hidden-md
                       td.success #{ramount.toFixed(8)} #{settings.symbol}
                   else
                     tr
                       td 
-                        a.loading(href='/address/#{r.addresses}') 
-                          =r.addresses 
+                        a.loading(href='/address/#{r.address}') 
+                          =r.address 
                       td.success.hidden-xs  #{ramount.toFixed(8)}
                     tr.hidden-lg.hidden-md
                       td.success #{ramount.toFixed(8)} #{settings.symbol} 

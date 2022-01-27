@@ -21,7 +21,7 @@ module.exports = {
             "hex": "76a9140017caddb62b6d1f903f9162af8e175e6722f69888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XahLLP5pSjJo56vo9cZPeG4p1Tqzkqqud9"
             ]
           }
@@ -34,7 +34,7 @@ module.exports = {
             "hex": "76a91400c2c4cb8a0f8d88bdc1a304acd441d78375f19f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XaksA2EfWxk9X5qaLPrT3JBQgZmkULqdre"
             ]
           }
@@ -47,7 +47,7 @@ module.exports = {
             "hex": "76a91401c9823389f9b9c9694c407a4affbedc739ae47788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XarHuWRqXhYLDyB8d5vp1gVaFq41CDx3iM"
             ]
           }
@@ -60,7 +60,7 @@ module.exports = {
             "hex": "76a9140381939758f2dd85381180d1585f46ea2dc28e8888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xb1P5xs2Grt9T7TXbvRsx7QJbnxS7C9kjH"
             ]
           }
@@ -73,7 +73,7 @@ module.exports = {
             "hex": "76a91405880e018515c2418c6ab23e5cd44a953e5657d588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XbC6CTcUfM4bhXkgr3W8gNhZv8ZBL1VXUC"
             ]
           }
@@ -86,7 +86,7 @@ module.exports = {
             "hex": "76a91406139ce5833636fd35db3a6930979999b8a39d9288ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XbEyP8Z3tCxFZWvaJUrUH4znZbo3uaoND4"
             ]
           }
@@ -99,7 +99,7 @@ module.exports = {
             "hex": "76a9140cfb71523f9aacab689378b75371d4c929e40e9388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XbsVA6dHXGAGTRTC99fqiPMvQffTnQ2G8L"
             ]
           }
@@ -112,7 +112,7 @@ module.exports = {
             "hex": "76a9140f6ca685db2ce670f82fb1f087a0e6cc75a74ef688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xc6Q8JGnXDtXzxUDsuUkEuf7epDPAYSDVp"
             ]
           }
@@ -125,7 +125,7 @@ module.exports = {
             "hex": "76a914101caa06ec51ace8dee6cb4b9c57a1d64409fe3588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XcA2ywi6B6oatHP423Ed5EAvoTHX6bhnU9"
             ]
           }
@@ -138,7 +138,7 @@ module.exports = {
             "hex": "76a9141233d4503b21d712fb9433da1c15510f2bb0becf88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XcM65sa6uqmniQQxSZvLgMwf1MgqAzJKjZ"
             ]
           }
@@ -151,7 +151,7 @@ module.exports = {
             "hex": "76a914133ffb2c83e3fc1f473e81fb185f05f840435a5388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XcSdKPMtZxd3sS4jWtmLdLKf1Ksadq95DD"
             ]
           }
@@ -164,7 +164,7 @@ module.exports = {
             "hex": "76a91414dee9c342a363a4651be146a7f97a8961c81dca88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XcbCPNCNHoCjg6LWp2YoYyXy2f2NMih3n1"
             ]
           }
@@ -177,7 +177,7 @@ module.exports = {
             "hex": "76a914150b2a05fb206210c0fde3ccc471ce81bb36ab3888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xcc7Pyr1TMaDdrSz6i53FdqSA21ruiqjJq"
             ]
           }
@@ -190,7 +190,7 @@ module.exports = {
             "hex": "76a9141b1b0675d211b7815b22ab610fb87ec3c562540b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdAATBLuzzudqMj2SGidi4cpXoBBLdbVLw"
             ]
           }
@@ -203,7 +203,7 @@ module.exports = {
             "hex": "76a9141c8dacf5f9c1c2544052c9eefc4338e543dcd48d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdHpURJvwp7uA1hY6vayaqFC6jaoXZuxut"
             ]
           }
@@ -216,7 +216,7 @@ module.exports = {
             "hex": "76a9141d014d1ec2f4ab2952b24554bd398b4a0f66237f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdLCzEEgfj59VasLq5GZAuYr2iifBBMsBQ"
             ]
           }
@@ -229,7 +229,7 @@ module.exports = {
             "hex": "76a9141d9ef2f49be100ab0efe19b4a39fdad8f899bf3d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdPTqnm8yHuoFrED7kMjyfxHG8ydsvSNzt"
             ]
           }
@@ -242,7 +242,7 @@ module.exports = {
             "hex": "76a9141f2f68924f1b18a7ae6166e03ec84a7e46f85d5888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdXjaCWkZLBSc7qfxa6YZhEzRfi5XyMEZQ"
             ]
           }
@@ -255,7 +255,7 @@ module.exports = {
             "hex": "76a91421d89b7da66c275fe8443173aff16fd207f9f4cb88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdmocjEFHW7aW4EPWK1RDwRPS5nwV7G7ES"
             ]
           }
@@ -268,7 +268,7 @@ module.exports = {
             "hex": "76a9142337495c28af50e9131df8abc7f06dba985b23ed88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xdu3iLycNg1aSrKPtYLvbifLKCr5KmCojN"
             ]
           }
@@ -281,7 +281,7 @@ module.exports = {
             "hex": "76a91423a00450db4c8b525b323d55e9b241b3bdf9295288ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdwDB8iKJJWnLiw1bGLkktEfy6YgNcm7VT"
             ]
           }
@@ -294,7 +294,7 @@ module.exports = {
             "hex": "76a91423e40cea92e65fa305ea900973ce5660fc90766d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdxcgC2N2HUUhm5FvRf8SBMTr8Ko5fbK72"
             ]
           }
@@ -307,7 +307,7 @@ module.exports = {
             "hex": "76a914241cac9579609b6aeb60a5317e7c72951deebf6488ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdynWUUuMqGx8hykGrcLgcPMAogCNCeDgf"
             ]
           }
@@ -320,7 +320,7 @@ module.exports = {
             "hex": "76a914259c0b4727165293da29f604363ef9cbbb991ef788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xe7hmUvFv1wPbt8PqyU2Kj1fudpopR8zP5"
             ]
           }
@@ -333,7 +333,7 @@ module.exports = {
             "hex": "76a9142a8be2794045f935b2b7f08441c4c70105ded8de88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XeZonfeM8BUw54iyZtY6kJ5mtPHi8B4NgG"
             ]
           }
@@ -346,7 +346,7 @@ module.exports = {
             "hex": "76a9142bdf7f463eedb563da48541338689602f16f22e988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XegpdMgoNeR2CHxGyx5iZakFgvpUeErehs"
             ]
           }
@@ -359,7 +359,7 @@ module.exports = {
             "hex": "76a9142dc2cd998603db74f996bb614368ad4a30a51ccc88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xeroc3Wp2ZZiXebrLPSxNUZeSmWNGUpa1E"
             ]
           }
@@ -372,7 +372,7 @@ module.exports = {
             "hex": "76a9142e2583c9757db56b487cd99a3930d40e7208278088ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XetqreikTvfihBzod4CCP8HLszg5yc4nmj"
             ]
           }
@@ -385,7 +385,7 @@ module.exports = {
             "hex": "76a9142f49d2b701015fcc7d5916cef65be11db21d124588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xezt2b6nbGi2znKxCVBYTgTKWcfehh9esZ"
             ]
           }
@@ -398,7 +398,7 @@ module.exports = {
             "hex": "76a9142f6773763e918c4697a9d55677e068f88c90630d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xf1VXAxpZPR837D6bw33LXPMCKgvWAXAF2"
             ]
           }
@@ -411,7 +411,7 @@ module.exports = {
             "hex": "76a914305664006544c5b627c5a8e85658b2aef45b887f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xf6RkzEXgWDngxPCQzGcU32VB4SJGEGBW4"
             ]
           }
@@ -424,7 +424,7 @@ module.exports = {
             "hex": "76a914306d1a046f72a4ed7ff7e875c1dd36e0a83140e688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xf6txyXmmxVtRaWAmprD1nMGrEAJkGCTjR"
             ]
           }
@@ -437,7 +437,7 @@ module.exports = {
             "hex": "76a9143527f56cc4307a30e21a1c8633d3f95e3c933f2c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XfXuWoJ49kVaDtG2ZXeT1TyJn4hmMNtqt4"
             ]
           }
@@ -450,7 +450,7 @@ module.exports = {
             "hex": "76a914360afdd5d3513242d6c0b5dc1ce7b9dbca623abf88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XfcbVKQZv3T6tJpji2zhPggdabbAf6GjYa"
             ]
           }
@@ -463,7 +463,7 @@ module.exports = {
             "hex": "76a914377b81f653786fc87452fd2de593331bd85806fa88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XfkCxGStegbTLBft8MwQZJqF9UUEHnC69y"
             ]
           }
@@ -476,7 +476,7 @@ module.exports = {
             "hex": "76a9143897cb6be518702b7958fd4dc7f4117764c5190d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xfr5WsTMh6dY732pUm1Zg5STgjADpdTpus"
             ]
           }
@@ -489,7 +489,7 @@ module.exports = {
             "hex": "76a9143921349656ab69b016e2008b9cf53dcb18a166c388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xftv8LiYgu3HP3QN1KNm98PWJp4atuDMqS"
             ]
           }
@@ -502,7 +502,7 @@ module.exports = {
             "hex": "76a9143c7e533d904a5545d0b8120b5d243cb8832294cc88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XgChhzKkSbCfzbbMczdmBVccZsVfP8qehf"
             ]
           }
@@ -515,7 +515,7 @@ module.exports = {
             "hex": "76a9143dd1aa3baca148ba6c76da9a1b66cd45a1339b2e88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XgKiDjTWaNPXb1XDS295b6YZE4oofHSJ7w"
             ]
           }
@@ -528,7 +528,7 @@ module.exports = {
             "hex": "76a91442a060fa43098f71580cb76bc5966cd620e4c4b988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xgm8ZEHo5roshcgDZ5N9N9PrT8U7TiiozE"
             ]
           }
@@ -541,7 +541,7 @@ module.exports = {
             "hex": "76a91442d9a91bc3bc15e370f874998bb1b4a78595ddde88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XgnKBEfojJKZaPDvBmZQJ6qKeBYq6rt2ib"
             ]
           }
@@ -554,7 +554,7 @@ module.exports = {
             "hex": "76a91444cd3f365552b7d03b94542d3b5d0073a6195dd088ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xgxdf6zZgyhGuqHpztWVYNpi4f6Wcnk7pV"
             ]
           }
@@ -567,7 +567,7 @@ module.exports = {
             "hex": "76a914454299769054adb7f1db407379cf5b437b580f3b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xh14EuFhpfUBLSKDXUaCRs4X4bifC4sEXo"
             ]
           }
@@ -580,7 +580,7 @@ module.exports = {
             "hex": "76a91446227efef53d21e60c8456062712f0ba25ecffa188ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xh5gTWbb9q7snRnc8kb1Xjd5y1HGGnxnHE"
             ]
           }
@@ -593,7 +593,7 @@ module.exports = {
             "hex": "76a914475bea6eeda6259efe4fa02e9e87e2cbafddfe3f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhC9vHthuHC57hRnKtCTd53cb3vdFsb55w"
             ]
           }
@@ -606,7 +606,7 @@ module.exports = {
             "hex": "76a91448faae214d05ebc938bee98b5fac47082669efa688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhLindXa9mdABfp7HnNTEfJxztK6mK2vqN"
             ]
           }
@@ -619,7 +619,7 @@ module.exports = {
             "hex": "76a91449deffd0a8c8c94aa01aa8936184006509be390188ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhRSJX2a3uxFEJ6FaoQNPvyaLYJLsLswyG"
             ]
           }
@@ -632,7 +632,7 @@ module.exports = {
             "hex": "76a9144ad9703a27791217af5d032eb5d00473b7aaa9e888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhWcKLGDLkg1efcWPixzqC5PvtNvhzeRFs"
             ]
           }
@@ -645,7 +645,7 @@ module.exports = {
             "hex": "76a9144b557f94a778eaeda0423f8706886ca48c6cf0de88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhZAwAsmduV2um3iJ3sjxj87G2Abjy6Wtr"
             ]
           }
@@ -658,7 +658,7 @@ module.exports = {
             "hex": "76a9144cc10a7e03cfc093b441042c12c2fc7ece9822e488ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhggSZAXxeRwUAgPhRMrhA1AFsXN99Rg2U"
             ]
           }
@@ -671,7 +671,7 @@ module.exports = {
             "hex": "76a9144cfd53f98777756b1501eaca185fd3e43130a51b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhhvfNZ3zdi7ChdLD1WGbSQNjAQmndwiBd"
             ]
           }
@@ -684,7 +684,7 @@ module.exports = {
             "hex": "76a9144e2a7c2cf588692cec0a607d5440afcae984a86a88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xhp9S8VevqAvLagayJ4VLfmvRcp2zsbQCS"
             ]
           }
@@ -697,7 +697,7 @@ module.exports = {
             "hex": "76a9144ea5cd66e72f2545a0a7122b4d7c833b87a3424588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhrhANA3HEBLntytTVLMfaocVptrscmzM2"
             ]
           }
@@ -710,7 +710,7 @@ module.exports = {
             "hex": "76a9144fa0e9b34a48f9aec369a128bc07a2a7bb0fc2a688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XhwsyqCT5pXmfbMCvjkVefcqTAzsUd1y2z"
             ]
           }
@@ -723,7 +723,7 @@ module.exports = {
             "hex": "76a91450e913358fc8fd6f5d298dbd328e53208a73381c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xi4f6wKLy8uPM697go5KodMy7kLNqVxbG3"
             ]
           }
@@ -736,7 +736,7 @@ module.exports = {
             "hex": "76a9145113df3e32a58dab5e4e3710e19fa2e4c8e2902588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xi5YNXRvKPqwzfcWDgWJyXLvGLVuvoMJLq"
             ]
           }
@@ -749,7 +749,7 @@ module.exports = {
             "hex": "76a914529590f42f2cf5b8b7419c9567284aa7976d2d7688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XiDWR2XV3S3KPSd7QARE3rAmGd9vp3Dbow"
             ]
           }
@@ -762,7 +762,7 @@ module.exports = {
             "hex": "76a91453612fe0e592b92555c914c3f2f7d94eea60217e88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XiHiLr9uqjdmj5MpVR6WRndQ9NyCSqSnj8"
             ]
           }
@@ -775,7 +775,7 @@ module.exports = {
             "hex": "76a9145b7e4a1e039909f0d3f4d41d0bbe43e169ddef3288ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xj2ccTcqC66BwetMhoyKtCoZHDEwt5Dx6e"
             ]
           }
@@ -788,7 +788,7 @@ module.exports = {
             "hex": "76a9145bb09185cccbf27d92d281683c38924d7a72934088ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xj3equCkwhv5TPtgQbu1mtbrhP1bfLCmT4"
             ]
           }
@@ -801,7 +801,7 @@ module.exports = {
             "hex": "76a9145be0e087573f5d7bb610a7e795e4ced28057051888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xj4eiScc2c1kCLnYZfh3fbuYLqgcqmEWwW"
             ]
           }
@@ -814,7 +814,7 @@ module.exports = {
             "hex": "76a9145c5c9c9c68d1b588f71fb28c40b4343728623bf188ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xj7CwgPKiWpwsPxCsosMepkuaH8MYHWpX8"
             ]
           }
@@ -827,7 +827,7 @@ module.exports = {
             "hex": "76a9145f41e6f86f9e6b907b56e11cfcda481c4f3ebed188ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XjNWySjPEAfoLRkue4trUWkN9QzAPATfPL"
             ]
           }
@@ -840,7 +840,7 @@ module.exports = {
             "hex": "76a9145ffe148e705c0db93787e718078d46ab11dd145d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XjSQQHYHbKJwiokPDETRAQTk2FFGtEnwXX"
             ]
           }
@@ -853,7 +853,7 @@ module.exports = {
             "hex": "76a91462d7237ea79d702911ae0f70c64b109e50423a3b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XjhTn9ZTRTs17Sm6FkwHbhfMmzmW3gUS6N"
             ]
           }
@@ -866,7 +866,7 @@ module.exports = {
             "hex": "76a914639c4a3a9d4b8d3294c8bce9994b84b849b9751b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XjmXxThuSLXYSzHp9amf22vaAqDV679Lar"
             ]
           }
@@ -879,7 +879,7 @@ module.exports = {
             "hex": "76a9146433e0197252d9adbdf454260e30bfeb5f20b3eb88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XjpfYoT54FXeZhuXytdyhtN7BjiUhYaPs8"
             ]
           }
@@ -892,7 +892,7 @@ module.exports = {
             "hex": "76a9146bc9fd09c731a2a53172c4d32f79d4addb36cb4e88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkWn7BUq9iUhrTm5XpJPrtmowzHZi6onSv"
             ]
           }
@@ -905,7 +905,7 @@ module.exports = {
             "hex": "76a9146c52858dc71dd958f3cc4ca557e9ad1b6a73076688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkZbfgLRxRvQ9wWBxEvLhdK7pnbRcHDmqP"
             ]
           }
@@ -918,7 +918,7 @@ module.exports = {
             "hex": "76a9146e33bfc076f4e00f0451e45f0be3c9e7348df77988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkjY9wW3DQnwoPE32gDh6Zjot8S7wTgN53"
             ]
           }
@@ -931,7 +931,7 @@ module.exports = {
             "hex": "76a9146f29eb179f1bb84783ce6993eec2855cb768013d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xkpd45nAsS8mQHkrmTWRo2SPZ1r9Ujft4J"
             ]
           }
@@ -944,7 +944,7 @@ module.exports = {
             "hex": "76a914704066be1b6ce16136343337139075bb39e034c888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkvNfRRXQYMuFUfDb3K5nWAEHC5afVtWRw"
             ]
           }
@@ -957,7 +957,7 @@ module.exports = {
             "hex": "76a914709835c7118e1e38e4f4e4ea5b24a4b5bbb7975188ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkxBrUm8jNWs8BhqFLCAs6F9GXiVs5pPyG"
             ]
           }
@@ -970,7 +970,7 @@ module.exports = {
             "hex": "76a91470d2bd9093460bfcdc102df2df03f93a67791f3e88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkyPyF7q1hZQ4at17nnsAbM2meyzyWxN24"
             ]
           }
@@ -983,7 +983,7 @@ module.exports = {
             "hex": "76a91470de3fa57675169813d1d447f833d90b1655bdaa88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkydkqrnCQ3Pe5bJUoxkjaKveQirfpnYP1"
             ]
           }
@@ -996,7 +996,7 @@ module.exports = {
             "hex": "76a91471dbcce3a7284605fc1c34c06b78915f31191f0388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xm4sVvgCf7ENSyT4FJcLeo2oJpcwFaBAYw"
             ]
           }
@@ -1009,7 +1009,7 @@ module.exports = {
             "hex": "76a9147378981165588d2194e773c0fedd6d3fbb1fc8d588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XmDQ1LGcyGhn9JfVLeJ76cg6yKbbqTta4M"
             ]
           }
@@ -1022,7 +1022,7 @@ module.exports = {
             "hex": "76a91476892a51fa14808f04c921aa1548ee34ce5927a488ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XmVbtJVsagMM5bkGgEHmNCokii8EfgXJqy"
             ]
           }
@@ -1035,7 +1035,7 @@ module.exports = {
             "hex": "76a914789388acf501536641ec5eaa8b76ca79e00c954388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XmgPf7BfnVxxeELfTxCTH7VWzQo6RKrc6W"
             ]
           }
@@ -1048,7 +1048,7 @@ module.exports = {
             "hex": "76a9147a63cd1aa399c2dfe7ab3d665a04a8bd1c24796c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xmqypxv3tA5UrG4wMfrShZXbTNmiGtGUm7"
             ]
           }
@@ -1061,7 +1061,7 @@ module.exports = {
             "hex": "76a9147a85c403953e2f14884d05e047f1d74bd4f3732c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XmrgWrnP4632LKEEHRocnCACGsdkc2XoVm"
             ]
           }
@@ -1074,7 +1074,7 @@ module.exports = {
             "hex": "76a9147aa46091b29522165209796f63f5ad82c6138edc88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XmsKBnZvCw11mxsZeUodFUKTLGY7DdidDD"
             ]
           }
@@ -1087,7 +1087,7 @@ module.exports = {
             "hex": "76a9147accdd3e48636b5d2aac640c8c4d63e6698ae69688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xmt9gsbTEbM2pVftcrcgVqtTN8p7Rvexoj"
             ]
           }
@@ -1100,7 +1100,7 @@ module.exports = {
             "hex": "76a9147d6add54695cc00f63adc3e6c70e92d2922df02788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xn7zKK6CVaucjYtV41sWKXFjf1dhYSzPs2"
             ]
           }
@@ -1113,7 +1113,7 @@ module.exports = {
             "hex": "76a914801cd8d17894391202bbb799f41dc5a762325f4988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XnNEt8RGUxyEBjtr2GRnLs756wcGRrUSMV"
             ]
           }
@@ -1126,7 +1126,7 @@ module.exports = {
             "hex": "76a91480f3447c15b3d50de8200309193f74de1fefc79888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XnSfkLAb96Nor6qhp4EppE9od8REseA94D"
             ]
           }
@@ -1139,7 +1139,7 @@ module.exports = {
             "hex": "76a91485476a85fd98b57e09ccefb87c7862d83fb4770c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XnqZFqxtB7FvtQ7yov7ep7gUgf2acyNHCj"
             ]
           }
@@ -1152,7 +1152,7 @@ module.exports = {
             "hex": "76a914861fd9d9f74f3674b242bada9583de7f1deb9cfc88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xnv2Y1Ax4bbvU5U9SfAUciRkqeyZwcjGuz"
             ]
           }
@@ -1165,7 +1165,7 @@ module.exports = {
             "hex": "76a914874833df206b5b4dd5e3954f3997169bd02aee6d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xo29Ysomwbt5vpi8Zqhz4pt5bJH3JM8fVg"
             ]
           }
@@ -1178,7 +1178,7 @@ module.exports = {
             "hex": "76a9148cbd53f5e2144273da05006206be3adefd57077288ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XoX1Er83Map2dUG8ksd2CpaURYQHGpRjhN"
             ]
           }
@@ -1191,7 +1191,7 @@ module.exports = {
             "hex": "76a9148cceedadc94f653be6cf143abf860cf63534950a88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XoXNKkQufafPkTeVduuMRDV2UxA4xyP6kw"
             ]
           }
@@ -1204,7 +1204,7 @@ module.exports = {
             "hex": "76a9148f828931e4152cf6f8c727e95875ca12929680af88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XomeqUnBZPdvbWqjUw1sdKM1TvZU5tMFe3"
             ]
           }
@@ -1217,7 +1217,7 @@ module.exports = {
             "hex": "76a9148f89169eea635cad19a87656e15bbcbeab22a4e088ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XomngkYgTvyURJ81Xkne8nfT1osTceEEEJ"
             ]
           }
@@ -1230,7 +1230,7 @@ module.exports = {
             "hex": "76a91493256e65184fb7eefdcbb9ff1eb1acb7c521a8df88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xp6t1DiK5NLr9HFvARLPzZ95ke2W3BCTLm"
             ]
           }
@@ -1243,7 +1243,7 @@ module.exports = {
             "hex": "76a91495f9f380ccce413470b03f69f604481f49c9371788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XpMqwkPe8Qs8djraeb3qUemZE663QUaot3"
             ]
           }
@@ -1256,7 +1256,7 @@ module.exports = {
             "hex": "76a9149920f0eea700ae6dd85be5db2fa451e3c92c149688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XpeWgPpC3vTCK2r4BDkUbHg4ZytNboSmzW"
             ]
           }
@@ -1269,7 +1269,7 @@ module.exports = {
             "hex": "76a9149b2689deb4b1dcaf152891d210bdfabcba785b8d88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XpqCjh97fvYaFB148KicFLAPpQhBw1dtWQ"
             ]
           }
@@ -1282,7 +1282,7 @@ module.exports = {
             "hex": "76a9149b66df73ce703487047a95e4bba16d649dcb8fb788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XprXoieUeojw3BeUc79hv4zHzFpNCABhfP"
             ]
           }
@@ -1295,7 +1295,7 @@ module.exports = {
             "hex": "76a9149bfc80212260fdac9a50dc1431343fe49aa4c06188ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xpud42gk5vABkWabup9Bc9hXbTr8vBQQQH"
             ]
           }
@@ -1308,7 +1308,7 @@ module.exports = {
             "hex": "76a9149ccdcf1a10087e3e91c31e1acf10191f0f03fbf888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xpywo3BWo7M3bRJ7jN8Rnho4Ltb5NcWdFN"
             ]
           }
@@ -1321,7 +1321,7 @@ module.exports = {
             "hex": "76a9149d7f638cd6370966db718e0f2015b59ac28bdfa688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xq3cXWDXGHg9ofkaHv15XgRRys1xGrXdcL"
             ]
           }
@@ -1334,7 +1334,7 @@ module.exports = {
             "hex": "76a9149fbc481c006c693cf4c471c316e6fbd0628dbaa588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XqFSpo3tRafvd6CCaoVxZw9By78gb8TNGW"
             ]
           }
@@ -1347,7 +1347,7 @@ module.exports = {
             "hex": "76a914a2193aeaa445d59b3e94202a514a0956cd49b0ee88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XqTwXMKB5dHpHbd48wuntifC756SvjmMS1"
             ]
           }
@@ -1360,7 +1360,7 @@ module.exports = {
             "hex": "76a914a42c05771bec634d23b263688dd5e5e2a461ba0788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XqeuPNStJAfj9veroSvw1VESM67CNAhoYT"
             ]
           }
@@ -1373,7 +1373,7 @@ module.exports = {
             "hex": "76a914a593fc717a00c2f0c1f348023f7974c25cc7e8d688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XqnLcAFujL3YG2bRiJY7JZRe6aThrXnx9e"
             ]
           }
@@ -1386,7 +1386,7 @@ module.exports = {
             "hex": "76a914a5f2b7027cd6e79e58d17aa808ac04000f759f4c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XqpJ62kuUyvPWMa7H7iULHf9jWxNjHtPuV"
             ]
           }
@@ -1399,7 +1399,7 @@ module.exports = {
             "hex": "76a914a667e7d9374343faf2eb6ed1d28329b34c4ddaa888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XqriUb7gLY32Xdu8EkAxkjrWiBWdK7nhvW"
             ]
           }
@@ -1412,7 +1412,7 @@ module.exports = {
             "hex": "76a914a85b311469cd6fb8e063b113559d5f87dc56ffb188ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xr32bbKkroKLeJqksXrH1XPcJhKnnfJgS7"
             ]
           }
@@ -1425,7 +1425,7 @@ module.exports = {
             "hex": "76a914aeb791184345d7731b2ac9fef69f7ab37a5eb38888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XrcfK5KAuMfde2UiboxAtX6u6NeUjEUbXx"
             ]
           }
@@ -1438,7 +1438,7 @@ module.exports = {
             "hex": "76a914afd0fcf3cdb69c0a3f638fff856ccb53b9952d0388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XriUSa5mruaatpodgweoKmYjbErXENX1HC"
             ]
           }
@@ -1451,7 +1451,7 @@ module.exports = {
             "hex": "76a914b24c013d2b558bfc1d8761d53cb12ff46a55f67788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XrwbAJpkDbfKCXyKdw4mt1xhm4L9FexF6o"
             ]
           }
@@ -1464,7 +1464,7 @@ module.exports = {
             "hex": "76a914b256212bd126be4a904cb943d480e74ff5de718288ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XrwoHnbtRwHmLy5Q4rUsGCDRgKTqfcsZHr"
             ]
           }
@@ -1477,7 +1477,7 @@ module.exports = {
             "hex": "76a914b34a8df41a45d8298cbf3d1b73dab8f119ad7d9b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xs2r6jEbBuy5hit9PrMwzRwos6fwzssXxk"
             ]
           }
@@ -1490,7 +1490,7 @@ module.exports = {
             "hex": "76a914b46290c9e5d710b8f6a5bb59696c16059349598788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xs8dYEr61woZSFDTwcvHBHYhiwmQC8k8XX"
             ]
           }
@@ -1503,7 +1503,7 @@ module.exports = {
             "hex": "76a914b83e5c17d27ca1cae416f66dd073114ac5e89e8888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XsV2sP3RpxVkvsC8rjHroeXegmAFt3p1yL"
             ]
           }
@@ -1516,7 +1516,7 @@ module.exports = {
             "hex": "76a914ba08deef4dc1f50efed75ece90f483bd934faba488ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XseW9Hotap2Esmzet9VNRGG1rP8W5YqskX"
             ]
           }
@@ -1529,7 +1529,7 @@ module.exports = {
             "hex": "76a914bab1aeeac0ce1f6d782778af13d107c7ea41a4e988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XshzNapZgtpRMwh1rWrph2fLUQ9tYWxt4k"
             ]
           }
@@ -1542,7 +1542,7 @@ module.exports = {
             "hex": "76a914be8264675a70bb6ade7da718c182eb916646559088ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xt4ARWYo69PPyDywJntniRRazMaMhJ4xUK"
             ]
           }
@@ -1555,7 +1555,7 @@ module.exports = {
             "hex": "76a914c1ac310643c4a65d0bd656b1394d178e7b0a095c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XtLtXMNTqwPdkig4LG96iJgduwibDiJ6gN"
             ]
           }
@@ -1568,7 +1568,7 @@ module.exports = {
             "hex": "76a914c3e3d751f8ce0fc513b77457aea3d2ba1474f56888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XtYcYLWVywaCruHpEwj8RJXveDAewFUeCs"
             ]
           }
@@ -1581,7 +1581,7 @@ module.exports = {
             "hex": "76a914c5871c0a506574a4c7ed542c844e3eec61e8207488ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XthGocrN3FWJfnBXbzb6mBbMUThMJgdSjM"
             ]
           }
@@ -1594,7 +1594,7 @@ module.exports = {
             "hex": "76a914c6793ffef3aa4d47a88ebbc05237e2318cfca2e388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XtnGsqEfmcrAMXSJzXHe9yhyR7CbN3VvJu"
             ]
           }
@@ -1607,7 +1607,7 @@ module.exports = {
             "hex": "76a914c8b0d53953e303f134d427f488582d1e87c0ab1088ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XtyzpBhSY4w88LNM1Fpz5pAufYEsCYunNi"
             ]
           }
@@ -1620,7 +1620,7 @@ module.exports = {
             "hex": "76a914cb2d616148a950c78ab234c9fe346199abb58a0788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XuD9NHBhN8QAa9hEK474TEUbZgFmrfxu2p"
             ]
           }
@@ -1633,7 +1633,7 @@ module.exports = {
             "hex": "76a914ceda607319521623aee1082a1a0e82d2bf3c189f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XuYadrTcX9obbQFzRpapjkfKTJXMHP4qpj"
             ]
           }
@@ -1646,7 +1646,7 @@ module.exports = {
             "hex": "76a914d2175a00bb16edaabf9fd352512702894e258f6f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xuqhi2uPRqAoor9jJQdCr7CGfUvvxGnb9V"
             ]
           }
@@ -1659,7 +1659,7 @@ module.exports = {
             "hex": "76a914d2a9639358bdec6f79a8bffe0d76bc8ae4af7c2b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XutietYum33NwhuyyKXw1bpj3i49B8wtfd"
             ]
           }
@@ -1672,7 +1672,7 @@ module.exports = {
             "hex": "76a914d657087b4813630d98cc7dbf14795e05a07d700f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XvEAhUPt6Bo4ajW1RN7HT6NfCMvSKdGgsq"
             ]
           }
@@ -1685,7 +1685,7 @@ module.exports = {
             "hex": "76a914d95b4afaeb6e169ba4b794bf5d44ac0101437f0888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XvW7q2E5tdYXTsQvXJBm9vNaESHvWkzqpP"
             ]
           }
@@ -1698,7 +1698,7 @@ module.exports = {
             "hex": "76a914dbf57121dfbb2464183c34be400b5d42636cd9b688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XvjsqsJadfBGZVSQEnQ7HuhdzCadCJ1srU"
             ]
           }
@@ -1711,7 +1711,7 @@ module.exports = {
             "hex": "76a914de7dc78da2d8cf61768caa41fda4426c640049fe88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XvyGX9q3KmCKkGqmcd624aW77zMyjdSieB"
             ]
           }
@@ -1724,7 +1724,7 @@ module.exports = {
             "hex": "76a914e04da8ea779b02506c5734661764070fc75589ab88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xw8rE85gmAWYncwXoQ64rfmBefhPmYwQEW"
             ]
           }
@@ -1737,7 +1737,7 @@ module.exports = {
             "hex": "76a914e0c2c8bc9c88931cd76b3479696e787ce498ce5f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XwBGY4Yf8V6zGRYDct2LU9uK4mhFN7WBmP"
             ]
           }
@@ -1750,7 +1750,7 @@ module.exports = {
             "hex": "76a914e0d2dc925d0beefd9646fb0f3376f0a24857e95b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XwBbo9MbUmUmCnZTWTLouExSRqQFR8gnhz"
             ]
           }
@@ -1763,7 +1763,7 @@ module.exports = {
             "hex": "76a914e192a8ddc68b54ba5ca188eefe5436c0c0f2eac688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XwFZZWGA38a9oUihohmx7YcoUdKTVUbn7K"
             ]
           }
@@ -1776,7 +1776,7 @@ module.exports = {
             "hex": "76a914e1e7ce46b3c2d5815dcc8cdf39014c9400e98d7c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XwHKZZZs4EBDpLAiSp8Y6UDRCzjUzZnVqf"
             ]
           }
@@ -1789,7 +1789,7 @@ module.exports = {
             "hex": "76a914e99436faa53adcba953afff1083270982394918a88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xwytq6JG5nPwf5P2SY4wYSzQ12kinhcSkR"
             ]
           }
@@ -1802,7 +1802,7 @@ module.exports = {
             "hex": "76a914e9b39912b6cfe5858d611c5dac7fe44dbdc1eb1988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XwzYRdi4NfP66ekKoz35bMLSiX7dsRPyf6"
             ]
           }
@@ -1815,7 +1815,7 @@ module.exports = {
             "hex": "76a914ea6233078379df1f9c21a91476f78664e9b0f65888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xx49b9iV2AH2HRK64FCcAtxZVvxe7eBSBa"
             ]
           }
@@ -1828,7 +1828,7 @@ module.exports = {
             "hex": "76a914ea7ef5449ff26242a426787bb4974fa3ae9c67de88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xx4k3LtVrX4peMJcrDJG5XDsYVLWMLGB4W"
             ]
           }
@@ -1841,7 +1841,7 @@ module.exports = {
             "hex": "76a914ec928ae36b8e9200425f23b438097a7d2a4223f888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XxFirUjyueG7LLkETwAHXWs4uXb4quTumE"
             ]
           }
@@ -1854,7 +1854,7 @@ module.exports = {
             "hex": "76a914eee1ecf8cfbe2b36e06700dcf5901c753888aaac88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XxTwJVx7Y1UueGcYUkanFiyGuf7b8vJ9om"
             ]
           }
@@ -1867,7 +1867,7 @@ module.exports = {
             "hex": "76a914f3b5202f1cf8a2e18070322b5f6ca4138c2e015b88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XxuT1hmw3w69E7868iPvUtfCmqgXwXXLr8"
             ]
           }
@@ -1880,7 +1880,7 @@ module.exports = {
             "hex": "76a914f551575483501cf5cdf92e43011ae469972aac2288ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xy3xpw4ev5dTzijnLoTiw1s6bUzq76s5wi"
             ]
           }
@@ -1893,7 +1893,7 @@ module.exports = {
             "hex": "76a914f55762ba7a51807d8a468a3ba0746be2c1941c9588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xy464uxWevibQQH5TYkyQkWkZuMBUvVdjz"
             ]
           }
@@ -1906,7 +1906,7 @@ module.exports = {
             "hex": "76a914f5eb4ef4f706955c0398372b011d1ce00612183f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xy79GmVax2ULZsJD1uCXfLqK6HmpX94Upf"
             ]
           }
@@ -1919,7 +1919,7 @@ module.exports = {
             "hex": "76a914f78271070bd4044eb8681b91d0e7ff7cddf0573c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XyFYzsTm5WApiQBiLbZB4XkAG1G4BmkiUW"
             ]
           }
@@ -1932,7 +1932,7 @@ module.exports = {
             "hex": "76a914f8fb9d5b8c0703fa236da816c81c6a24b5a51f1988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XyPLqKcZL7t9XwZ4LkeLY8nQFre2t6FLeM"
             ]
           }
@@ -1945,7 +1945,7 @@ module.exports = {
             "hex": "76a914f9a6532d2947340f2124da5f30f0fa03bcfb5b4388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XySsLUayCqRjPasiKATEZn8ad4BVtarPn7"
             ]
           }
@@ -1958,7 +1958,7 @@ module.exports = {
             "hex": "76a914faf55c2e7bc78bedfd1aebe2cb004c183d59c73588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XyZnh8QqW4SqssVKc8uLiQqRjvQP9gFFh6"
             ]
           }
@@ -1971,7 +1971,7 @@ module.exports = {
             "hex": "76a914f9147fb5b6fed808a2fd62d9bf16445d9f6e75a688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XyPreJfnUxSSY1QbYqQxDXpymc26VFQPDV"
             ]
           }
@@ -1984,7 +1984,7 @@ module.exports = {
             "hex": "41042d71f6448f92c35ede838e3922313b162cbf20d357e7d067115aac8d1a27f66a89b46dee086775c8b083ee5f06fe1c08d1d0ae0668d029aed17e1f8eaea544d4ac",
             "reqSigs": 1,
             "type": "pubkey",
-            "addresses": [
+            "address": [
               "Xcfme7cJDpWBgQE7Bsf71pPmse9YCjV2CF"
             ]
           }
@@ -2185,7 +2185,7 @@ module.exports = {
             "hex": "76a91430afcc6ae17989ff9b6b68fdbdfeb00091255d2588ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xf8Gs9yrHMwDhNAmvMf5UmYXnMdSFQxjta"
             ]
           }
@@ -2198,7 +2198,7 @@ module.exports = {
             "hex": "76a914b07f34d003402cb6e7ec0965002bc40f2cdb015888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xrn59TstSGXnPLUFdd3rkYQwFK7wEBe2GG"
             ]
           }
@@ -2211,7 +2211,7 @@ module.exports = {
             "hex": "76a9148c431a7cf363b32766ae1f8c9fa5cdec6c193b4988ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XoUUpYJTs1UR38Yat8B4YBrdddFrhhx2n5"
             ]
           }
@@ -2224,7 +2224,7 @@ module.exports = {
             "hex": "76a9142a4a8d1b8c3d254862d3f88795bd1dbe4dfc67c788ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XeYTXDdk5BU1BRTtLByopSUjRysvCbNv8Q"
             ]
           }
@@ -2237,7 +2237,7 @@ module.exports = {
             "hex": "76a914e46fef7c40973887afaa61d11b2d2841b1c0e3fc88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XwWhzQSZhyoZ2grrV9xFWwEdGZ4FA3jcrp"
             ]
           }
@@ -2250,7 +2250,7 @@ module.exports = {
             "hex": "76a9142e6079b25a04525a1488bfa620fe22f0b28ef3e388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xev4VJcK5dXAawoe8r54Pkkgt2p7P2FZ6X"
             ]
           }
@@ -2263,7 +2263,7 @@ module.exports = {
             "hex": "76a914d3e50fc083a3a97d0ae2f5f46943c6848dae1f4f88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xv1EpCn96N598C6dzW6qum7Dmri4Yxkib2"
             ]
           }
@@ -2276,7 +2276,7 @@ module.exports = {
             "hex": "76a91415490d96ffe5cc56592908faf6dae87f708b45e888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XcdPY6i98Cx8d3WD4F3v452hu9RKkEZ9yr"
             ]
           }
@@ -2289,7 +2289,7 @@ module.exports = {
             "hex": "76a9145fa19bb5125a9f072a6c1884b1373909753af14c88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XjQVdDNdDYBT5Z8VLuRR8V5ZU9xhciXsTZ"
             ]
           }
@@ -2302,7 +2302,7 @@ module.exports = {
             "hex": "76a9141da4e2a7a8ff61d76e3664b93f64c530b3f67d1488ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XdPaxFdBN4MWcw8hgQNfBzPyhMGTm2i7E5"
             ]
           }
@@ -2315,7 +2315,7 @@ module.exports = {
             "hex": "76a914050ee763fe34f50b890c00ef378bbca9ff742f5e88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xb9b4kYi6Mm3PFX2QphUJmeuYebZenWEUb"
             ]
           }
@@ -2328,7 +2328,7 @@ module.exports = {
             "hex": "76a914610314316c7c9b4b806d08d9527a15b9f2f5252288ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XjXo4nVxEvtXvSeVGEHnNeNjvWdcdGRGRT"
             ]
           }
@@ -2341,7 +2341,7 @@ module.exports = {
             "hex": "76a914a84ea1941ae8db5ae0e3b0784c19a1679e40e6f388ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xr2mYsRXNjcVLCcrdJAHcYAPakUHLGp398"
             ]
           }
@@ -2354,7 +2354,7 @@ module.exports = {
             "hex": "76a914fd21b5ac4b208d98abfd655ccffa3c20b129c9b488ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XymHAyVXBhhyLrm5i9XcR4MkYWRT8qD5eC"
             ]
           }
@@ -2367,7 +2367,7 @@ module.exports = {
             "hex": "76a9148726fc2c3af8cad2d19fe68ff4504b3b637f3b7888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xo1TksxHxX4XT5PuvxKqJw4HmkXaV9UVs5"
             ]
           }
@@ -2380,7 +2380,7 @@ module.exports = {
             "hex": "76a9146c58cf1f13e89953c2b725f5bc3c24010b50653688ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XkZjCXtVf5Gcf1QvGxMZUgytiu9STqovaG"
             ]
           }
@@ -2393,7 +2393,7 @@ module.exports = {
             "hex": "76a914ae6e7cbe6cb7547fa00dc400fcbb0721c9199dfa88ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "Xrb9mRUYQ7rmicinhUvb23jwnmfzy2X3mB"
             ]
           }
@@ -2406,7 +2406,7 @@ module.exports = {
             "hex": "76a914c37dfa63595ac21ee62e87ca7966def1c4edfd3888ac",
             "reqSigs": 1,
             "type": "pubkeyhash",
-            "addresses": [
+            "address": [
               "XtWWWmf1SafaUMr6jWSMXqvKmGTm6K5GgN"
             ]
           }

@@ -62,17 +62,17 @@ mongoose.connect(dbString,{useNewUrlParser: true, useUnifiedTopology: true}, fun
     exit();
   } else {
     //BEGIN
-    const data = {addresses: 0, active: 0, top10: 0, top50: 0};
+    const data = {address: 0, active: 0, top10: 0, top50: 0};
     console.log('calcul stats: '+statsName);
     if (statsName == 'topAddress'){
-      Address.find({}).sort({balance: 'desc'}).limit(50).exec(function(err, addresses){
+      Address.find({}).sort({balance: 'desc'}).limit(50).exec(function(err, address){
         if (err) {
           console.log("ERROR: can not get address collection");
           exit();
         }else{
           var address;
-          for (var i=0; i < addresses.length; i++ ){
-            address = addresses[i];
+          for (var i=0; i < address.length; i++ ){
+            address = address[i];
             if (i >=1 && i <=9){
               data.top10 = data.top10 + address.balance / 100000000;
             }
@@ -88,18 +88,18 @@ mongoose.connect(dbString,{useNewUrlParser: true, useUnifiedTopology: true}, fun
         }
       });
     } else if (statsName == 'activeAddress'){
-      Address.find({balance: {$gt: 100000000}}).exec(function(err, addresses){
-          data.active = addresses.length;
+      Address.find({balance: {$gt: 100000000}}).exec(function(err, address){
+          data.active = address.length;
           Stats.updateOne({coin: settings.coin}, {
-              active_addresses: addresses.length,
+              active_address: address.length,
           }, function() {exit();});
         console.log("INFO: updated Active address");
       });
     } else if (statsName == 'totalAddress'){
       Address.countDocuments().exec(function(err, count){
-        data.addresses = count;
+        data.address = count;
         Stats.updateOne({coin: settings.coin}, {
-            addresses: count,
+            address: count,
         }, function() {exit();});
         console.log("INFO: updated Total Address");
       });
@@ -312,7 +312,7 @@ mongoose.connect(dbString,{useNewUrlParser: true, useUnifiedTopology: true}, fun
         const cursor = Tx.aggregate([
                           {$match: {
                              $and: [
-                                 {vout: {$elemMatch: {addresses: {$in: ["SinBurnAddressGovernanceVoteba5vkQ","SinBurnAddress123456789SuqaXbx3AMC","SinBurnAddressForMetadataXXXXEU2mj","SinBurnAddressForNotifyXXXXXc42TcT"]}}}},
+                                 {vout: {$elemMatch: {address: {$in: ["SinBurnAddressGovernanceVoteba5vkQ","SinBurnAddress123456789SuqaXbx3AMC","SinBurnAddressForMetadataXXXXEU2mj","SinBurnAddressForNotifyXXXXXc42TcT"]}}}},
                                  {blockindex: {$gt: deepth1d}},
                                  {blockindex: {$lt: height}},
                                  {vout: {$elemMatch: {amount: {$lt: 200000000000}}}},
@@ -320,15 +320,15 @@ mongoose.connect(dbString,{useNewUrlParser: true, useUnifiedTopology: true}, fun
                              }},
                              { "$unwind": "$vout" },
                              {$group: {
-                               "_id": "$vout.addresses",
+                               "_id": "$vout.address",
                                count: { $sum: 1 },
                                total: { $sum: {
                                  $cond: [
                                    {$or: [
-                                     {$eq: ["$vout.addresses", "SinBurnAddressGovernanceVoteba5vkQ"]},
-                                     {$eq: ["$vout.addresses", "SinBurnAddress123456789SuqaXbx3AMC"]},
-                                     {$eq: ["$vout.addresses", "SinBurnAddressForMetadataXXXXEU2mj"]},
-                                     {$eq: ["$vout.addresses", "SinBurnAddressForNotifyXXXXXc42TcT"]},
+                                     {$eq: ["$vout.address", "SinBurnAddressGovernanceVoteba5vkQ"]},
+                                     {$eq: ["$vout.address", "SinBurnAddress123456789SuqaXbx3AMC"]},
+                                     {$eq: ["$vout.address", "SinBurnAddressForMetadataXXXXEU2mj"]},
+                                     {$eq: ["$vout.address", "SinBurnAddressForNotifyXXXXXc42TcT"]},
                                      ]}
                                      ,{$divide: ["$vout.amount", 100000000]},
                                      0
@@ -416,7 +416,7 @@ mongoose.connect(dbString,{useNewUrlParser: true, useUnifiedTopology: true}, fun
                                      {$match: {
                                        $and: [
                                          {blockindex: {$gt: deepth7}},
-                                         {vin: {$elemMatch: {addresses : {$ne: "coinbase"}}}}
+                                         {vin: {$elemMatch: {address : {$ne: "coinbase"}}}}
                                        ]
                                      }},
                                      {$group: {

@@ -108,7 +108,7 @@ function route_get_address(res, hash, count) {
       }
       lib.syncLoop(count, function (loop) {
         var i = loop.iteration();
-        db.get_tx(hashes[i].addresses, function(tx) {
+        db.get_tx(hashes[i].address, function(tx) {
           if (tx) {
             txs.push(tx);
             loop.next();
@@ -245,8 +245,8 @@ router.get('/summary', function(req, res) {
 						"connections":0,
 						"blockcount":0,
 						"explorerHeight": 0,
-						"explorerAddresses": 0,
-						"explorerActiveAddresses": 0,
+						"explorerAddress": 0,
+						"explorerActiveAddress": 0,
 						"explorerTop10": 0,
 						"explorerTop50": 0,
 						"burnFee":0,
@@ -265,8 +265,8 @@ router.get('/summary', function(req, res) {
 					connections: summarystats.data[0].connections,
 					blockcount: summarystats.data[0].blockcount,
 					explorerHeight: summarystats.data[0].explorerHeight,
-					explorerAddresses: summarystats.data[0].explorerAddresses,
-					explorerActiveAddresses: summarystats.data[0].explorerActiveAddresses,
+					explorerAddress: summarystats.data[0].explorerAddress,
+					explorerActiveAddress: summarystats.data[0].explorerActiveAddress,
 					explorerTop10: summarystats.data[0].explorerTop10,
 					explorerTop50: summarystats.data[0].explorerTop50,
 					burnFee: summarystats.data[0].burnFee,
@@ -581,8 +581,8 @@ router.get('/ext/summary', function(req, res) {
                   connections: connections,
                   blockcount: blockcount,
                   explorerHeight: stats.last,
-                  explorerAddresses: stats.addresses,
-                  explorerActiveAddresses: stats.active_addresses,
+                  explorerAddress: stats.address,
+                  explorerActiveAddress: stats.active_address,
                   explorerTop10: stats.top10,
                   explorerTop50: stats.top50,
                   burnFee: stats.fee_burn,

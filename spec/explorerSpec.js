@@ -29,21 +29,21 @@ describe('explorer', function() {
   describe('is_unique', function() {
   
     var arrayStrMap = [ 
-      {'addresses' : 'XsF8k8s5CoS3XATqW2FkuTsznbJJzFAC2U'},
-      {'addresses' : 'XsF8k8s5C14FbhqW2FkuATsznFACAfVhUn'},
-      {'addresses' : 'XsF8k8s5CoAF5gTqW2FkuTsznbJJzhkj5A'},
-      {'addresses' : 'XfuW2K9QiGMSsq5eXgtimEQvTvz9dzBCzb'}
+      {'address' : 'XsF8k8s5CoS3XATqW2FkuTsznbJJzFAC2U'},
+      {'address' : 'XsF8k8s5C14FbhqW2FkuATsznFACAfVhUn'},
+      {'address' : 'XsF8k8s5CoAF5gTqW2FkuTsznbJJzhkj5A'},
+      {'address' : 'XfuW2K9QiGMSsq5eXgtimEQvTvz9dzBCzb'}
     ];
 
     var arrayArrMap = [ 
-      {'addresses' : ['XsF8k8s5CoS3XATqW2FkuTsznbJJzFAC2U']},
-      {'addresses' : ['XsF8k8s5C14FbhqW2FkuATsznFACAfVhUn']},
-      {'addresses' : ['XsF8k8s5CoAF5gTqW2FkuTsznbJJzhkj5A']},
-      {'addresses' : ['XfuW2K9QiGMSsq5eXgtimEQvTvz9dzBCzb']}
+      {'address' : ['XsF8k8s5CoS3XATqW2FkuTsznbJJzFAC2U']},
+      {'address' : ['XsF8k8s5C14FbhqW2FkuATsznFACAfVhUn']},
+      {'address' : ['XsF8k8s5CoAF5gTqW2FkuTsznbJJzhkj5A']},
+      {'address' : ['XfuW2K9QiGMSsq5eXgtimEQvTvz9dzBCzb']}
     ];
 
     it('should return index of matching string object', function() {
-      lib.is_unique(arrayStrMap, arrayStrMap[2].addresses, function(unique, index){
+      lib.is_unique(arrayStrMap, arrayStrMap[2].address, function(unique, index){
         expect(index).toEqual(2);
         expect(unique).toEqual(false);
         
@@ -51,7 +51,7 @@ describe('explorer', function() {
     });
 
     it('should return index of matching array object', function() {
-      lib.is_unique(arrayArrMap, arrayArrMap[2].addresses, function(unique, index){
+      lib.is_unique(arrayArrMap, arrayArrMap[2].address, function(unique, index){
         expect(index).toEqual(2);
         expect(unique).toEqual(false);
         
@@ -94,7 +94,7 @@ describe('explorer', function() {
     it('should maintain order', function(done) {
       lib.prepare_vout(data.txA().vout, data.txA().txid, function(prepared) {
         expect(prepared[150].amount).toEqual(2.1006);
-        expect(prepared[150].addresses).toEqual(['XyPreJfnUxSSY1QbYqQxDXpymc26VFQPDV']);
+        expect(prepared[150].address).toEqual(['XyPreJfnUxSSY1QbYqQxDXpymc26VFQPDV']);
         done();  
       });
     });
@@ -142,10 +142,10 @@ describe('explorer', function() {
       });
     });
 
-    it('should get correct input addresses', function(done) {
+    it('should get correct input address', function(done) {
       lib.prepare_vin(data.txB(), function(prepared) {
         expect(prepared[3].amount).toEqual(10.00000001);
-        expect(prepared[3].addresses).toEqual('XjYC7q5QwG7dGnytYDoCURhL4CATj6WQhZ');
+        expect(prepared[3].address).toEqual('XjYC7q5QwG7dGnytYDoCURhL4CATj6WQhZ');
         done();  
       });
     });

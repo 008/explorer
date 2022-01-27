@@ -82,7 +82,7 @@ app.use('/ext/getaddress/:hash/:txesLimit', function(req,res){
       var txes = [];
       lib.syncLoop(count, function (loop) {
         var i = loop.iteration();
-        db.get_tx(hashes[i].addresses, function(tx) {
+        db.get_tx(hashes[i].address, function(tx) {
           if (tx && (limit == 0 || (limit > 0 && i < limit))) {
             txes.push(tx);
             loop.next();
@@ -178,7 +178,7 @@ app.use('/ext/addressstats', function(req,res){
   db.get_address_stats('count', function(count){
     db.get_address_stats('top', function(top){
       db.get_address_stats('active', function(active){
-        res.send({addresses: count.addresses, active: active.active, top10: top.top10, top50: top.top50});
+        res.send({address: count.address, active: active.active, top10: top.top10, top50: top.top50});
       });
     });
   });

@@ -77,7 +77,7 @@ html
           a.navbar-brand(href='https://sinovate.io', target='_blank')
             img(src="/images/logo.png",)
             
-        .collapse.navbar-collapse(id='navbar-collapse' style='float:left;')
+        .collapse.navbar-collapse(id='navbar-collapse' style='float:right;')
           ul.nav.navbar-nav
             li#home
               a.navbar-link(href='/')
@@ -92,7 +92,7 @@ html
               li#movement
                 a.navbar-link.loading(href='/movement')
                   span.fa.fa-money
-                  span.menu-text #{settings.locale.menu_movement}
+                  span.menu-text Blocks
             if settings.display.network == true
               li#network
                 a.navbar-link(href='/network')
@@ -131,7 +131,7 @@ html
             .search(style='align:center;margin-top:5px;margin-bottom: 5px;float:right;')
               form.form-inline(method='post', action='/search')
                 #index-search.form-group
-                  input.form-control(type='text', name='search', placeholder='#{settings.locale.ex_search_message}', style='min-width:70%;margin-right:5px;')
+                  input.form-control(type='text', name='search', placeholder='Search for block height, wallet or tx id', style='min-width:70%;margin-right:5px;')
                   button.btn.btn-success(type='submit', style='background-color:#0FADB9; border: none; border-radius: 10px') #{settings.locale.ex_search_button}
     block content
     .navbar.navbar-default.navbar-fixed-bottom.hidden-xs(style='background-color: #00023B;color: #353c42; font-size:14px; font-weight:bold;padding-left: 50px;')

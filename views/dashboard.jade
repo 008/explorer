@@ -1,425 +1,502 @@
 extends layout
 
 block content
+  style.
+    tr td{
+      max-width:0px !important;
+        }
+    .jqplot-title {
+      text-align:left !important;
+      top: -25px !important;}
+    .table, .label-white, .bg-white {
+      background: black !important;
+        }
+
   script(src='/vendor/jqplot/plugins/jqplot.meterGaugeRenderer.min.js')
   script.
-      $(document).ready(function(){
-        $('##{active}').addClass('active');
-        function formatNumber(num) {
-          return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-        }
-        function update_stats(){
-          var supply = 0;
-          var burnt = 0;
-          var hashrate = 0;
-          $.ajax({url: '/summary', success: function(json){
-            $("#supply").text(formatNumber(Math.floor(json.supply)));
-            supply = json.supply;
-            $("#difficulty").text(json.difficulty);
-            $("#difficultyHybrid").text(json.difficultyHybrid);
-            $("#hashrate").text(json.hashrate);
-            hashrate = json.hashrate;
-            $("#lastPrice").text(json.lastPrice.toFixed(8));
-            $("#lblConnections").text(json.connections + ' connections');
-            $("#lblBlockcount").text('[E] ' + json.explorerHeight + ' / [D] ' + json.blockcount);
-            $("#lblX1").text(' ');
-            $("#burnfee").text(formatNumber(Math.floor(json.burnFee - json.burnNode)));
-            $("#burnnode").text(formatNumber(json.burnNode));
-            $("#burntotal").text(formatNumber(Math.floor(json.burnFee)));
-            $("#explorerAddress").text(json.explorerAddress);
-            $("#explorerActiveAddress").text(json.explorerActiveAddress);
-            $("#explorerTop10").text(formatNumber(Math.floor(json.explorerTop10)));
-            $("#explorerTop50").text(formatNumber(Math.floor(json.explorerTop50)));
-            var KnownHash = (json.known_hashrate / 1000000000).toFixed(2);
-            $("#hashrate").text(KnownHash+ ' / ' + hashrate + '');
-            var nTx=[json.tx_d6_count, json.tx_d5_count, json.tx_d4_count, json.tx_d3_count, json.tx_d2_count, json.tx_d1_count, json.tx_d0_count];
-            var vTx=[Number.parseInt(json.tx_d6_value), Number.parseInt(json.tx_d5_value), Number.parseInt(json.tx_d4_value), 
-                     Number.parseInt(json.tx_d3_value), Number.parseInt(json.tx_d2_value), Number.parseInt(json.tx_d1_value), Number.parseInt(json.tx_d0_value)];
-            var ticks=["D-6", "D-5", "D-4", "D-3", "D-2", "D-1", "D"];
-            $("#barTxStatsValue").text('');
-            plot1 = $.jqplot('barTxStatsValue', [vTx], {
-                   title: 'Transaction values ($SIN) per day',
-                   seriesColors:['silver'],
-                   grid: {drawGridlines: false, borderColor: 'transparent', shadow: false, drawBorder: false, shadowColor: 'transparent'},
-                   seriesDefaults: {
-                     renderer:$.jqplot.BarRenderer
-                   },
-                   series:[
-                     {pointLabels:{
-                       show: true,
-                       labels:vTx
-                   }}],
-                   axes: {
-                     xaxis: {
-                       renderer: $.jqplot.CategoryAxisRenderer,
-                       ticks: ticks
-                     }
-                   }
-            });
-            $("#barTxStatsNumber").text('');
-            plot3 = $.jqplot('barTxStatsNumber', [nTx], {
-                   title: 'Transactions per day',
-                   seriesColors:['#2E3191'],
-                   grid: {drawGridlines: false, borderColor: 'transparent', shadow: false, drawBorder: false, shadowColor: 'transparent'},
-                   seriesDefaults: {
-                     renderer:$.jqplot.BarRenderer
-                   },
-                   series:[
-                     {pointLabels:{
-                       show: true,
-                       labels:nTx
-                   }}],
-                   axes: {
-                     xaxis: {
-                       renderer: $.jqplot.CategoryAxisRenderer,
-                       ticks: ticks
-                     }
-                   }
-            });
-            $('#playeranim').css('display', 'none');
-            $("#barExpiredHeight").text('');
-            var exp=[json.inf_exp, json.inf_exp_1d, json.inf_exp_7d, json.inf_exp_14d, json.inf_exp_30d, json.inf_exp_60d,
-                     json.inf_exp_90d, json.inf_exp_120d, json.inf_exp_150d, json.inf_exp_180d, json.inf_exp_270d, json.inf_exp_365d];
-            var label=["Expired", "1D", "7D", "14D", "1M", "2M", "3M", "4M", "5M", "6M", "9M", "1Y"]
-            plot2 = $.jqplot('barExpiredHeight', [exp], {
-                   title: 'Infinity node expire timeline',
-                   seriesColors:['#0FADB9'],
-                   grid: {drawGridlines: false, borderColor: 'transparent', shadow: false, drawBorder: false, shadowColor: 'transparent'},
-                   seriesDefaults: {
-                     renderer:$.jqplot.BarRenderer
-                   },
-                   series:[
-                     {pointLabels:{
-                       show: true,
-                       labels:exp
-                   }}],
-                   axes: {
-                     xaxis: {
-                       renderer: $.jqplot.CategoryAxisRenderer,
-                       ticks: label
-                     }
-                   }
-            });
-            $("#gaugeIncome").text('');
-            var indexIncome = (((json.in_burnt_big + json.in_burnt_mid + json.in_burnt_lil)*720 + json.in_burnt_address) * 100) / 
-              ((json.payout_miner + json.payout_node_big + json.payout_node_mid + json.payout_node_lil) * 720);
-            var inflation = (json.payout_miner + json.payout_node_big + json.payout_node_mid + json.payout_node_lil) -
-              (json.in_burnt_big + json.in_burnt_mid + json.in_burnt_lil);
-            var sIndex = [Math.floor(indexIncome)];
-            plot10 = $.jqplot('gaugeIncome',[sIndex], {
-              title: 'Network income ' + (indexIncome).toFixed(2) + '%',
+    $(document).ready(function(){
+      var stable = $('#block-table').dataTable( {  
+        autoWidth: true,      
+        searching: true,
+        ordering: false,
+        responsive: true,
+        lengthChange: false,
+        processing: true,
+        paging: false,
+        info: false,
+        ajax: {
+          url: '/ext/summary',
+          dataSrc: function ( json ) {
+          console.log(json.data);
+            json.data[0]['height'] = "<a href='/block/" + json.data[0]['hash'] + "'>" + json.data[0]['height'] + "</a>";
+            return json.data;
+          }
+        },
+        columns: [
+          //{ data: 'height', width: '8%' },
+          { data: 'difficulty', width: '10%' },
+          //{ data: 'size', width:'10%' },
+          //{ data: 'txs', width: '10%' },
+          { data: 'supply', width: '15%' },
+          //{ data: 'time', width: '20%' },
+        ]
+      });
+      var rtable = $('#recent-table').dataTable( {  
+        autoWidth: true,      
+        searching: false,
+        ordering: false,
+        responsive: true,
+        lengthChange: true,
+        processing: true,
+        ajax: {
+          url: '/ext/getlasttxs/3478',
+          dataSrc: function ( json ) {
+            for ( var i=0;i<json.data.length; i++ ) {
+              json.data[i]['timestamp'] = new Date((json.data[i]['timestamp']) * 1000).toUTCString();
+              json.data[i]['txid'] = "<a href='/tx/" + json.data[i]['txid'] + "'>" + json.data[i]['txid'] + "</a>";
+              json.data[i]['blockindex'] = "<a href='/block/" + json.data[i]['blockhash'] + "'>" + json.data[i]['blockindex'] + "</a>";
+              var amount = json.data[i]['total'] / 100000000;
+              json.data[i]['total'] = amount.toFixed(8);
+            }
+            return json.data;
+          }
+        },
+        columns: [
+          { data: 'blockindex', width: '8%' },
+          { data: 'txid', width: '40%' },
+          { data: 'total', width: '20%' },
+          { data: 'timestamp', width: '25%' },
+        ]
+      });
+      setInterval( function () {
+        rtable.api().ajax.reload(null, false);
+        stable.api().ajax.reload(null, false);
+      }, 60000 );
+    });
+  script.
+    $(document).ready(function(){
+      $('##{active}').addClass('active');
+      function formatNumber(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+      }
+      function update_stats(){
+        var supply = 0;
+        var burnt = 0;
+        var hashrate = 0;
+        $.ajax({url: '/summary', success: function(json){
+          $("#supply").text(formatNumber(Math.floor(json.supply)));
+          supply = json.supply;
+          $("#difficulty").text(json.difficulty);
+          $("#difficultyHybrid").text(json.difficultyHybrid);
+          $("#hashrate").text(json.hashrate);
+          hashrate = json.hashrate;
+          $("#lastPrice").text(json.lastPrice.toFixed(8));
+          $("#lblConnections").text(json.connections + ' connections');
+          $("#lblBlockcount").text('[E] ' + json.explorerHeight + ' / [D] ' + json.blockcount);
+          $("#lblX1").text(' ');
+          $("#burnfee").text(formatNumber(Math.floor(json.burnFee - json.burnNode)));
+          $("#burnnode").text(formatNumber(json.burnNode));
+          $("#burntotal").text(formatNumber(Math.floor(json.burnFee)));
+          $("#explorerAddress").text(json.explorerAddress);
+          $("#explorerActiveAddress").text(json.explorerActiveAddress);
+          $("#explorerTop10").text(formatNumber(Math.floor(json.explorerTop10)));
+          $("#explorerTop50").text(formatNumber(Math.floor(json.explorerTop50)));
+          var KnownHash = (json.known_hashrate / 1000000000).toFixed(2);
+          $("#hashrate").text(KnownHash+ ' / ' + hashrate + '');
+          var nTx=[json.tx_d6_count, json.tx_d5_count, json.tx_d4_count, json.tx_d3_count, json.tx_d2_count, json.tx_d1_count, json.tx_d0_count];
+          var vTx=[Number.parseInt(json.tx_d6_value), Number.parseInt(json.tx_d5_value), Number.parseInt(json.tx_d4_value), 
+            Number.parseInt(json.tx_d3_value), Number.parseInt(json.tx_d2_value), Number.parseInt(json.tx_d1_value), Number.parseInt(json.tx_d0_value)];
+          var ticks=["D-6", "D-5", "D-4", "D-3", "D-2", "D-1", "D"];
+          $("#barTxStatsValue").text('');
+          plot1 = $.jqplot('barTxStatsValue', [vTx], {
+            title: 'Transaction values ($SIN) per day',
+            seriesColors:['silver'],
+            grid: {drawGridlines: false, borderColor: 'transparent', shadow: false, drawBorder: false, shadowColor: 'transparent'},
+            seriesDefaults: {
+              renderer:$.jqplot.BarRenderer
+            },
+            series:[
+              {pointLabels:{
+                show: true,
+                labels:vTx
+            }}],
+            axes: {
+              xaxis: {
+                renderer: $.jqplot.CategoryAxisRenderer,
+                ticks: ticks
+              }
+            }
+          });
+          $("#barTxStatsNumber").text('');
+          plot3 = $.jqplot('barTxStatsNumber', [nTx], {
+            title: 'Transactions per day',
+            seriesColors:['#2E3191'],
+            grid: {drawGridlines: false, borderColor: 'transparent', shadow: false, drawBorder: false, shadowColor: 'transparent'},
+            seriesDefaults: {
+              renderer:$.jqplot.BarRenderer
+            },
+            series:[
+              {pointLabels:{
+                show: true,
+                labels:nTx
+            }}],
+            axes: {
+              xaxis: {
+                renderer: $.jqplot.CategoryAxisRenderer,
+                ticks: ticks
+              }
+            }
+          });
+          $('#playeranim').css('display', 'none');
+          $("#barExpiredHeight").text('');
+          var exp=[json.inf_exp, json.inf_exp_1d, json.inf_exp_7d, json.inf_exp_14d, json.inf_exp_30d, json.inf_exp_60d,
+            json.inf_exp_90d, json.inf_exp_120d, json.inf_exp_150d, json.inf_exp_180d, json.inf_exp_270d, json.inf_exp_365d];
+          var label=["Expired", "1D", "7D", "14D", "1M", "2M", "3M", "4M", "5M", "6M", "9M", "1Y"]
+          plot2 = $.jqplot('barExpiredHeight', [exp], {
+            title: 'Infinity node expire timeline',
+            seriesColors:['#0FADB9'],
+            grid: {drawGridlines: false, borderColor: 'transparent', shadow: false, drawBorder: false, shadowColor: 'transparent'},
+            seriesDefaults: {
+              renderer:$.jqplot.BarRenderer
+            },
+            series:[
+              {pointLabels:{
+                show: true,
+                labels:exp
+            }}],
+            axes: {
+              xaxis: {
+                renderer: $.jqplot.CategoryAxisRenderer,
+                ticks: label
+              }
+            }
+          });
+          $("#gaugeIncome").text('');
+          var indexIncome = (((json.in_burnt_big + json.in_burnt_mid + json.in_burnt_lil)*720 + json.in_burnt_address) * 100) / 
+            ((json.payout_miner + json.payout_node_big + json.payout_node_mid + json.payout_node_lil) * 720);
+          var inflation = (json.payout_miner + json.payout_node_big + json.payout_node_mid + json.payout_node_lil) -
+            (json.in_burnt_big + json.in_burnt_mid + json.in_burnt_lil);
+          var sIndex = [Math.floor(indexIncome)];
+          plot10 = $.jqplot('gaugeIncome',[sIndex], {
+            title: 'Network income ' + (indexIncome).toFixed(2) + '%',
+            grid: {background: 'transparent'},
+            seriesDefaults: {
+              renderer: $.jqplot.MeterGaugeRenderer,
+                rendererOptions: {
+                  label: 'Deficit ' + (inflation).toFixed(2) + ' SIN per block',
+                  labelPosition: 'bottom',
+                  showTickLabels: true,
+                  min: 0,
+                  max: 200,
+                  background: '#011567',
+                  intervals:[50, 100, 150, 200],
+                  intervalColors:['#2E3191', '#0FADB9', '#CDAD0E', '#A56736']
+              }
+            }
+          });
+          $("#pieChart").text('');
+          var dataHCO = [
+            ['3 months (+3%)',json.hco_3m], ['6 months (+6%)',json.hco_6m], ['12 months (+15%)',json.hco_12m]
+          ];
+          var totalHCO = json.hco_3m + json.hco_6m + json.hco_12m;
+          var HCO = $.jqplot('pieChart', [dataHCO],
+            {
+              title: 'HODL Coin Offering: ' + totalHCO + ' $SIN',
               grid: {background: 'transparent'},
-              seriesDefaults: {
-                renderer: $.jqplot.MeterGaugeRenderer,
-                  rendererOptions: {
-                    label: 'Deficit ' + (inflation).toFixed(2) + ' SIN per block',
-                    labelPosition: 'bottom',
-                    showTickLabels: true,
-                    min: 0,
-                    max: 200,
-                    background: '#011567',
-                    intervals:[50, 100, 150, 200],
-                    intervalColors:['#2E3191', '#0FADB9', '#CDAD0E', '#A56736']
+              seriesColors: [ "#0FADB9", "#A56736", "#2E3191"],
+              series: [{
+                renderer: $.jqplot.PieRenderer,
+                rendererOptions: {
+                  dataLabels: [json.hco_3m, json.hco_6m, json.hco_12m],
+                  diameter: 200,
+                  padding: 0,
+                  sliceMargin: 4,
+                  startAngle: -90,
+                  showDataLabels: true,
                 }
+              }],
+              grid: {borderWidth:0, shadow:false},
+              legend: {
+                show: true, placement: "outsideGrid",
+                rendererOptions: {
+                  numberRows: 2,
+                  border: 'none',
+                  background: 'transparent'
+                },
+                location: 's'
               }
-            });
-            $("#pieChart").text('');
-            var dataHCO = [
-              ['3 months (+3%)',json.hco_3m], ['6 months (+6%)',json.hco_6m], ['12 months (+15%)',json.hco_12m]
-            ];
-            var totalHCO = json.hco_3m + json.hco_6m + json.hco_12m;
-            var HCO = $.jqplot('pieChart', [dataHCO],
-              {
-                 title: 'HODL Coin Offering: ' + totalHCO + ' $SIN',
-                 grid: {background: 'transparent'},
-                 seriesColors: [ "#0FADB9", "#A56736", "#2E3191"],
-                 series: [{
-                   renderer: $.jqplot.PieRenderer,
-                   rendererOptions: {
-                     dataLabels: [json.hco_3m, json.hco_6m, json.hco_12m],
-                     diameter: 200,
-                     padding: 0,
-                     sliceMargin: 4,
-                     startAngle: -90,
-                     showDataLabels: true,
-                   }
-                 }],
-                 grid: {borderWidth:0, shadow:false},
-                 legend: {
-                    show: true, placement: "outsideGrid",
-                    rendererOptions: {
-                      numberRows: 2,
-                      border: 'none',
-                      background: 'transparent'
-                    },
-                    location: 's'
-                 }
-              }
-            );
-            var roi_big = (365 / (1000000 / ((720 / json.inf_online_big) * 1752)) - 1)*100;
-            var roi_mid = (365 / (500000 / ((720 / json.inf_online_mid) * 838)) - 1)*100;
-            var roi_lil = (365 / (100000 / ((720 / json.inf_online_lil) * 560)) - 1)*100;
-            $("#n_big").text(json.inf_burnt_big + "/" + json.inf_online_big + " / ROI: " + Math.floor(roi_big).toFixed(2) + " %");
-            $("#n_mid").text(json.inf_burnt_mid + "/" + json.inf_online_mid + " / ROI: " + Math.floor(roi_mid).toFixed(2) + " %");
-            $("#n_lil").text(json.inf_burnt_lil + "/" + json.inf_online_lil + " / ROI: " + Math.floor(roi_lil).toFixed(2) + " %");
-            $("#n_totalnode").text(json.inf_online_big + json.inf_online_mid + json.inf_online_lil + " nodes");
-          }});
-          json = [];
-        };
-        setInterval( function() {
-          update_stats();
-        }, 60000);
+            }
+          );
+          var roi_big = (365 / (1000000 / ((720 / json.inf_online_big) * 1752)) - 1)*100;
+          var roi_mid = (365 / (500000 / ((720 / json.inf_online_mid) * 838)) - 1)*100;
+          var roi_lil = (365 / (100000 / ((720 / json.inf_online_lil) * 560)) - 1)*100;
+          $("#n_big").text(json.inf_burnt_big + "/" + json.inf_online_big + " / ROI: " + Math.floor(roi_big).toFixed(2) + " %");
+          $("#n_mid").text(json.inf_burnt_mid + "/" + json.inf_online_mid + " / ROI: " + Math.floor(roi_mid).toFixed(2) + " %");
+          $("#n_lil").text(json.inf_burnt_lil + "/" + json.inf_online_lil + " / ROI: " + Math.floor(roi_lil).toFixed(2) + " %");
+          $("#n_totalnode").text(json.inf_online_big + json.inf_online_mid + json.inf_online_lil + " nodes");
+        }});
+        json = [];
+      };
+      setInterval( function() {
         update_stats();
-      }); 
-  .col-md-12(style="margin-bottom: 4%")
+      }, 60000);
+      update_stats();
+    }); 
+  .col-md-12(style="margin-bottom: 5%; margin-top:7vh;")
     .row.text-center
-       .col-md-3
-          .panel.panel-default(style='background-color:transparent;')
-            .panel-heading
-              strong #{settings.locale.network}
-            .panel-body
-              table.table.table-bordered.summary-table(style='background-color: rgba(0, 2, 59, 1);border-radius:10px;color:white;border:none !important;')
-                tbody
-                  tr
-                    td
-                      if settings.nethash_units == 'K'
-                        span #{settings.locale.hashrate} (KH/s)
-                      else if settings.nethash_units == 'M'
-                        span #{settings.locale.hashrate} (MH/s)
-                      else if settings.nethash_units == 'G'
-                        span #{settings.locale.hashrate} (GH/s)
-                      else if settings.nethash_units == 'T'
-                        span #{settings.locale.hashrate} (TH/s)
-                      else if settings.nethash_units == 'P'
-                        span #{settings.locale.hashrate} (PH/s)
-                      else if settings.nethash_units == 'H'
-                        span #{settings.locale.hashrate} (H/s)
-                    td
-                      if settings.index.difficulty == 'Hybrid'
-                        span#hashrate -
-                        span#lblX1
-                      else
-                        span#hashrate -
-                  tr
-                    td
-                      span #{settings.locale.difficulty}
-                    td
-                      span#difficulty -
-                  tr
-                    td
-                      span #{settings.locale.mkt_last}
-                    td
-                      span#lastPrice -
-                  tr
-                    td
-                      span #{settings.locale.height}
-                    td
-                      span#lblBlockcount -
-       .col-md-3
-          .panel.panel-default(style='background-color:transparent;')
-            .panel-heading
-              strong #{settings.locale.address_stat}
-            .panel-body
-              table.table.table-bordered.summary-table(style='background-color: rgba(0, 2, 59, 1);border-radius:10px;color:white;border:none !important;')
-                tbody
-                  tr
-                    td
-                        span #{settings.locale.nb_address}
-                    td
-                        span#explorerAddress -
-                  tr
-                    td
-                      span #{settings.locale.active_address}
-                    td
-                      span#explorerActiveAddress -
-                  tr
-                    td
-                      span #{settings.locale.top10_address}
-                    td
-                      span#explorerTop10 -
-                  tr
-                    td
-                      span #{settings.locale.top50_address}
-                    td
-                      span#explorerTop50 -
-       .col-md-3
-          .panel.panel-default(style='background-color:transparent;')
-            .panel-heading
-              strong #{settings.locale.burn_stat}
-            .panel-body
-              table.table.table-bordered.summary-table(style='background-color: rgba(0, 2, 59, 1);border-radius:10px;color:white;border:none !important;')
-                tbody
-                  tr
-                    td
-                        span #{settings.locale.burn_fee}
-                    td
-                        span#burnfee -
-                  tr
-                    td
-                      span #{settings.locale.burn_node}
-                    td
-                      span#burnnode -
-                  tr
-                    td
-                      span #{settings.locale.burn_total}
-                    td
-                      span#burntotal -
-                  tr
-                    td
-                      span #{settings.locale.ex_supply}
-                    td
-                      span#supply -
-       .col-md-3
-          .panel.panel-default(style='background-color:transparent')
-            .panel-heading
-              strong #{settings.locale.infinitynode_stat}
-            .panel-body
-              table.table.table-bordered.summary-table(style='background-color: rgba(0, 2, 59, 1);border-radius:10px;color:white;border:none !important;')
-                tbody
-                  tr  
-                    td
-                        span(style='color:#ffd700')  #{settings.locale.infinitynode_n_big}
-                    td
-                        span(style='color:#ffd700')#n_big - 
-                  tr
-                    td
-                      span(style='color:#c0c0c0') #{settings.locale.infinitynode_n_mid}
-                    td
-                      span(style='color:#c0c0c0')#n_mid -
-                  tr
-                    td
-                      span(style='color:#cd7f32') MINI
-                    td
-                      span(style='color:#cd7f32')#n_lil -
-                  tr
-                    td
-                      span(style='font-size:16px') #{settings.locale.total}
-                    td
-                      span(style='font-size:16px')#n_totalnode -
-    .row.text-center(style='margin-bottom:15px;')
-       .col-md-6(style="margin-bottom: 4%; float: left; width: 48%; valign: bottom;padding: 10px 10px 10px 10px;")
-         div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#barExpiredHeight
-         br
-         div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#barTxStatsValue
-         br
-         div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#barTxStatsNumber
-         br
-         br
-         div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#gaugeIncome
-         br
-       .col-md-6(style="margin-bottom: 4%; float: right; width: 48%;padding: 10px 10px 10px 10px;")
-         .row.text-center
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/animate.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/backgrounds.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/boilerplate.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/border-radius.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/grid.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/page-transitions.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/spacing.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/typography.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/utils.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/colors.css')
-           link(rel='stylesheet', href='/stylesheets/assets/frontend-elements/footer.css')
-           link(rel='stylesheet', href='/stylesheets/assets/snippets/todo.css')
-           link(rel='stylesheet', href='/stylesheets/assets/snippets/user-profile.css')
-           link(rel='stylesheet', href='/stylesheets/assets/snippets/mobile-navigation.css')
-           link(rel='stylesheet', href='/stylesheets/assets/themes/frontend/layout.css')
-           link(rel='stylesheet', href='/stylesheets/assets/themes/frontend/color-schemes/default.css')
-           link(rel='stylesheet', href='/stylesheets/assets/themes/components/default.css')
-           link(rel='stylesheet', href='/stylesheets/assets/themes/components/border-radius.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/responsive-elements.css')
-           link(rel='stylesheet', href='/stylesheets/assets/helpers/frontend-responsive.css')
-           script(src='/javascripts/d3.v3.min.js')
-           script(src='/javascripts/topojson.v1.min.js')
-           script(src='/javascripts/d3.geo.projection.v0.min.js')
-           script(src='/javascripts/queue.v1.min.js')
-           br
-           br
-           br
-           br
-           br
-           br
-           div.row(id="mapcontainer" align="center" style="background-color: transparent ;border-radius:10px;font-weight:bold;color:white;border:none !important;")
-             h1 <b>Decentralized Data Center</b>
-             br
-             br
-           link(rel='stylesheet', href='/stylesheets/worldmap.v1.css')
-           script(src='/javascripts/worldmap.v1.js')
-           script(src='/javascripts/jqplot.pointLabels.js')
-           script.
-             var createmap = new Worldmap({
-               elementid: "#mapcontainer",
-               width: $( window ).width()/2 - $( window ).width()/20,
-               height: 400,
-               mapstyle: {
-                 ocean: "transparent",
-                 region: "#485563",
-                 border : "white"
-               },
-               project: {  
-                 name: "Aitoff" 
-               },
-               showtable:false,
-               editpanel:false,
-               data: [
-                   //{name: 'Bubble 1', coordinates: [21.32,  -7.32], size: 45, color: 'red'},
-                   //{name: 'Bubble 4', coordinates: [-31.32, 23.32], size: 5, color: 'black'}
-               ],
-               plugin: "bubble",
-               defaultfill: "steelblue",
-               zoomable: false,
-               defaultsize: 30,
-             });
-             var randomScalingFactor = function() {
-               return Math.round(Math.random() * 100);
-             };
-             var config = {
-               type: 'pie',
-               data: {
-                 datasets: [{
-                   data: [
-                     randomScalingFactor(),
-                     randomScalingFactor(),
-                     randomScalingFactor(),
-                     randomScalingFactor(),
-                     randomScalingFactor(),
-                   ],
-                   backgroundColor: [
-                   ],
-                   label: 'Dataset 1'
-                 }],
-                 labels: [
-                   'Red',
-                   'Orange',
-                   'Yellow',
-                   'Green',
-                   'Blue'
-                 ]
-               },
-               options: {
-                 responsive: true
-               }
-             };
-             $('#playeranim').css('display', 'none');
-             //worldmap
-             setTimeout(function(){
-               $.ajax({url: '/ext/dashboard', success: function(json){
-                 const data = [];
-                 const keys = Object.keys(json.data);
-                 for (var i = 0; i < keys.length; i++) {
-                   if (json.data[i].location == "SG") json.data[i].location = "MY";
-                   const item = {};
-                     item["location"] = json.data[i].location;
-                     item["MINI"] = ""+json.data[i].lil;
-                     item["MID"] = ""+json.data[i].mid;
-                     item["BIG"] = ""+json.data[i].big;
-                     if (item["location"] != null && item["location"] != "") {
-                       data.push(item)
-                     }
-                 }
-                 createmap.update(data, "barchart");
-               }})
-             }, 4000);
-         .row.text-center
-           center
-             div(style='width:350px;height:350px;margin:0px;background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#pieChart
+      .col-md-6.half
+        .panel.panel-default(style='background-color:transparent;')
+          .panel-heading
+            strong #{settings.locale.network}
+          .panel-body
+            table.table.table-bordered.summary-table(style='background-color: black;border-radius:10px;color:white;border:none !important;')
+              tbody
+                tr
+                  td
+                    if settings.nethash_units == 'K'
+                      span #{settings.locale.hashrate} (KH/s)
+                    else if settings.nethash_units == 'M'
+                      span #{settings.locale.hashrate} (MH/s)
+                    else if settings.nethash_units == 'G'
+                      span #{settings.locale.hashrate} (GH/s)
+                    else if settings.nethash_units == 'T'
+                      span #{settings.locale.hashrate} (TH/s)
+                    else if settings.nethash_units == 'P'
+                      span #{settings.locale.hashrate} (PH/s)
+                    else if settings.nethash_units == 'H'
+                      span #{settings.locale.hashrate} (H/s)
+                  td
+                    if settings.index.difficulty == 'Hybrid'
+                      span#hashrate -
+                      span#lblX1
+                    else
+                      span#hashrate -
+                tr
+                  td
+                    span #{settings.locale.difficulty}
+                  td
+                    span#difficulty -
+                tr
+                  td
+                    span #{settings.locale.mkt_last}
+                  td
+                    span#lastPrice -
+                tr
+                  td
+                    span #{settings.locale.height}
+                  td
+                    span#lblBlockcount -
+      .col-md-6
+        .panel.panel-default(style='background-color:transparent;')
+          .panel-heading
+            strong #{settings.locale.address_stat}
+          .panel-body
+            table.table.table-bordered.summary-table(style='background-color: black;border-radius:10px;color:white;border:none !important;')
+              tbody
+                tr
+                  td
+                    span #{settings.locale.nb_address}
+                  td
+                    span#explorerAddress -
+                tr
+                  td
+                    span #{settings.locale.active_address}
+                  td
+                    span#explorerActiveAddress -
+                tr
+                  td
+                    span #{settings.locale.top10_address}
+                  td
+                    span#explorerTop10 -
+                tr
+                  td
+                    span #{settings.locale.top50_address}
+                  td
+                    span#explorerTop50 -
+      .col-md-6
+        .panel.panel-default(style='background-color:transparent;')
+          .panel-heading
+            strong #{settings.locale.burn_stat}
+          .panel-body
+            table.table.table-bordered.summary-table(style='background-color: black;border-radius:10px;color:white;border:none !important;')
+              tbody
+                tr
+                  td
+                    span #{settings.locale.burn_fee}
+                  td
+                    span#burnfee -
+                tr
+                  td
+                    span #{settings.locale.burn_node}
+                  td
+                    span#burnnode -
+                tr
+                  td
+                    span #{settings.locale.burn_total}
+                  td
+                    span#burntotal -
+                tr
+                  td
+                    span #{settings.locale.ex_supply}
+                  td
+                    span#supply -
+      .col-md-6
+        .panel.panel-default(style='background-color:transparent')
+          .panel-heading
+            strong #{settings.locale.infinitynode_stat}
+          .panel-body
+            table.table.table-bordered.summary-table(style='background-color: black;border-radius:10px;color:white;border:none !important;')
+              tbody
+                tr  
+                  td
+                    span(style='color:#ffd700')  #{settings.locale.infinitynode_n_big}
+                  td
+                    span(style='color:#ffd700')#n_big - 
+                tr
+                  td
+                    span(style='color:#c0c0c0') #{settings.locale.infinitynode_n_mid}
+                  td
+                    span(style='color:#c0c0c0')#n_mid -
+                tr
+                  td
+                    span(style='color:#cd7f32') MINI
+                  td
+                    span(style='color:#cd7f32')#n_lil -
+                tr
+                  td
+                    span(style='font-size:16px') #{settings.locale.total}
+                  td
+                    span(style='font-size:16px')#n_totalnode -
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        strong Blocks
+      table#recent-table.table.table-bordered.table-striped
+        thead
+          tr
+            th.text-center #{settings.locale.ex_block}
+            th.hidden-xs.text-center #{settings.locale.tx_hash}
+            th.text-center #{settings.locale.mkt_amount} (#{settings.symbol})
+            th.text-center #{settings.locale.timestamp}
+        tbody.text-center
+    .row.text-center(style='margin-bottom:15px;margin-top:150px;')
+      .col-md-6(style="margin-bottom: 4%; float: left; width: 48%; valign: bottom;padding: 10px 10px 10px 10px;")
+        div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#barExpiredHeight
+        br
+        div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#barTxStatsValue
+        br
+        div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#barTxStatsNumber
+        br
+        br
+        div(style='background-color: transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;')#gaugeIncome
+        br
+      .col-md-6(style="margin-bottom: 4%; float: right; width: 48%;padding: 10px 10px 10px 10px;")
+        .row.text-center
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/animate.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/backgrounds.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/boilerplate.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/border-radius.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/grid.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/page-transitions.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/spacing.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/typography.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/utils.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/colors.css')
+          link(rel='stylesheet', href='/stylesheets/assets/frontend-elements/footer.css')
+          link(rel='stylesheet', href='/stylesheets/assets/snippets/todo.css')
+          link(rel='stylesheet', href='/stylesheets/assets/snippets/user-profile.css')
+          link(rel='stylesheet', href='/stylesheets/assets/snippets/mobile-navigation.css')
+          link(rel='stylesheet', href='/stylesheets/assets/themes/frontend/layout.css')
+          link(rel='stylesheet', href='/stylesheets/assets/themes/frontend/color-schemes/default.css')
+          link(rel='stylesheet', href='/stylesheets/assets/themes/components/default.css')
+          link(rel='stylesheet', href='/stylesheets/assets/themes/components/border-radius.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/responsive-elements.css')
+          link(rel='stylesheet', href='/stylesheets/assets/helpers/frontend-responsive.css')
+          script(src='/javascripts/d3.v3.min.js')
+          script(src='/javascripts/topojson.v1.min.js')
+          script(src='/javascripts/d3.geo.projection.v0.min.js')
+          script(src='/javascripts/queue.v1.min.js')
+          div.row(id="mapcontainer" align="center" style="background-color: transparent ;border-radius:10px;font-weight:bold;color:white;border:none !important;")
+            h1 <b>Decentralized Data Center</b>
+            br
+            br
+          link(rel='stylesheet', href='/stylesheets/worldmap.v1.css')
+          script(src='/javascripts/worldmap.v1.js')
+          script(src='/javascripts/jqplot.pointLabels.js')
+          script.
+            var createmap = new Worldmap({
+              elementid: "#mapcontainer",
+              width: $( window ).width()/2 - $( window ).width()/20,
+              height: 400,
+              mapstyle: {
+                ocean: "transparent",
+                region: "#485563",
+                border : "white"
+              },
+              project: {  
+                name: "Aitoff" 
+              },
+              showtable:false,
+              editpanel:false,
+              data: [
+                //{name: 'Bubble 1', coordinates: [21.32,  -7.32], size: 45, color: 'red'},
+                //{name: 'Bubble 4', coordinates: [-31.32, 23.32], size: 5, color: 'black'}
+              ],
+              plugin: "bubble",
+              defaultfill: "steelblue",
+              zoomable: false,
+              defaultsize: 30,
+            });
+            var randomScalingFactor = function() {
+              return Math.round(Math.random() * 100);
+            };
+            var config = {
+              type: 'pie',
+              data: {
+                datasets: [{
+                  data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                  ],
+                  backgroundColor: [
+                  ],
+                  label: 'Dataset 1'
+                }],
+                labels: [
+                  'Red',
+                  'Orange',
+                  'Yellow',
+                  'Green',
+                  'Blue'
+                ]
+              },
+              options: {
+                responsive: true
+              }
+            };
+            $('#playeranim').css('display', 'none');
+            //worldmap
+            setTimeout(function(){
+              $.ajax({url: '/ext/dashboard', success: function(json){
+                const data = [];
+                const keys = Object.keys(json.data);
+                for (var i = 0; i < keys.length; i++) {
+                  if (json.data[i].location == "SG") json.data[i].location = "MY";
+                  const item = {};
+                    item["location"] = json.data[i].location;
+                    item["MINI"] = ""+json.data[i].lil;
+                    item["MID"] = ""+json.data[i].mid;
+                    item["BIG"] = ""+json.data[i].big;
+                    if (item["location"] != null && item["location"] != "") {
+                      data.push(item)
+                    }
+                }
+                createmap.update(data, "barchart");
+              }})
+            }, 4000);
+        .row.text-center
+          center
+            div(style='width:350px;height:350px;margin:0px;background-color:transparent;border-radius:10px;font-weight:bold;color:white;border:none !important;margin-top:10vh;')#pieChart
